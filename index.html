@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Application</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet" />
+    </head>
+    <body>
+
+        <div class="container">
+            <!-- Start of Music Player Container  -->
+            <div class="player-container">
+                <div class="img-container" id="imgcontain">
+
+                </div>
+
+                <!-- Soundtrack Container Starts Here -->
+                <div class="songtrack">
+                    <audio id="audiotrack">
+                        <source src="/Assets/Audio/Heeriye.mp3"
+                            type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <h3 class="tracktitle"></h3>
+
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100"
+                            onchange="changeDuration()" value="0" class="slider"
+                            id="myRange">
+                    </div>
+
+                    <div class="timming">
+                        <span class="currenttime"></span>
+                        <span class="tracklength"></span>
+                    </div>
+
+                </div>
+                <!-- Soundtrack Container Ends Here -->
+
+                <!-- Music Player Action Container Starts here -->
+                <div class="action-container">
+                    <div class="previous" id="prevtrack">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 50px;cursor: pointer;">
+                            skip_previous
+                        </span>
+                    </div>
+                    <div class="play-pause" id="playpause">
+                        <span class="material-symbols-outlined playpauseicon"
+                            style="font-size: 50px;cursor: pointer;">
+                            play_circle
+                        </span>
+                    </div>
+                    <div class="next" id="nexttrack">
+                        <span class="material-symbols-outlined"
+                            style="font-size: 50px;cursor: pointer;">
+                            skip_next
+                        </span>
+                    </div>
+                </div>
+                <!-- Music Player Action Container Ends here -->
+
+            </div>
+            <!-- End of Music Player Container  -->
+
+            <!-- Start of List Of Songs Container -->
+            <div class="songlist">
+                <ul class="ullist" id="songsplaylist"></ul>
+            </div>
+            <!-- End of List Of Songs Container -->
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
