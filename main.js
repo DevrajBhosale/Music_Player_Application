@@ -31,6 +31,7 @@ audiotrack.addEventListener('ended', function () {
         let index = ++indexs
         audiotrack.pause();
         audiotrack.src = trackarray[index]['src'];
+        tracktitle.innerHTML = trackarray[index]['title'];  
         bgimage.style.backgroundImage = `url('${trackarray[index]['imgsrc']}')`;
         audiotrack.load();
         audiotrack.play();
